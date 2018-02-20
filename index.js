@@ -4,6 +4,7 @@ const next = require("next");
 const nextAuth = require("next-auth");
 const nextAuthConfig = require("./next-auth.config");
 const favicon = require("serve-favicon");
+const path = require("path");
 
 const routes = {
 	admin: require("./routes/admin"),
@@ -77,7 +78,7 @@ nextApp
 			return nextRequestHandler(req, res);
 		});
 
-		expressApp.use(favicon("./static/brand/favicon.ico"));
+		expressApp.use(favicon(path.join(__dirname, "static/brand", "favicon.ico")));
 
 		expressApp.listen(process.env.PORT, (err) => {
 			if (err) {

@@ -29,13 +29,8 @@ export default class extends React.Component {
 				boxShadow: "inset 0 0 100px rgba(0,0,0,0.1)"
 			}}>
 				<Container className="mt-2 mb-2">
-					<header className="header">
-						<img src="/static/brand/profilePic.jpg" alt="Professional Picture"/>
-						<img src="/static/brand/logo/310x400.png" alt="Logo - small"/>
-						<h1>{this.state.author}</h1>
-						<h3>{this.state.role}</h3>
-						<h5>{this.props.pagename}</h5>
-						<Links/>
+					<header>
+						<img src="/static/brand/profilePic.jpg" alt="Profile Picture" className="header-pp"/>
 					</header>
 				</Container>
 			</Jumbotron>

@@ -43,7 +43,7 @@ pre {
 }
 
 /**
- * This is a fix for Reactstrap 5.0.0-alpha.4 not displaying menus in the 
+ * This is a fix for Reactstrap 5.0.0-alpha.4 not displaying menus in the
  * navbar correcrtly on mobile devices.
  **/
 .navbar .dropdown {
@@ -72,4 +72,9 @@ pre {
 .react-bs-table-sizePerPage-dropdown button {
   background: #fff;
   color: #000;
+}
+
+.header-pp {
+  display: block;
+  margin: 0 auto;
 }
