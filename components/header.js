@@ -30,7 +30,7 @@ export default class extends React.Component {
 			}}>
 				<Container className="mt-2 mb-2">
 					<header>
-						<img src="/static/brand/profilePic.jpg" alt="Profile Picture" className="header-pp"/>
+						<img src="/static/brand/profile-picture/335x335.jpg" alt="Profile Picture" className="header-pp"/>
 					</header>
 				</Container>
 			</Jumbotron>
