@@ -1,10 +1,5 @@
 import React from "react";
-import {
-	Container, Row, Col, Nav, NavItem, Button, Form, NavLink, Collapse,
-	Navbar, NavbarToggler, NavbarBrand, Jumbotron
-} from "reactstrap";
-import Styles from "../css/index.scss";
-import profilePic from "../static/brand/profilePic.jpg";
+import { Container, Jumbotron } from "reactstrap";
 import PropTypes from "prop-types";
 import Links from "./links";
 
@@ -35,7 +30,8 @@ export default class extends React.Component {
 			}}>
 				<Container className="mt-2 mb-2">
 					<header className="header">
-						<img src={profilePic} alt="Professional Picture"/>
+						<img src="/static/brand/profilePic.jpg" alt="Professional Picture"/>
+						<img src="/static/brand/logo/310x400.png" alt="Logo - small"/>
 						<h1>{this.state.author}</h1>
 						<h3>{this.state.role}</h3>
 						<h5>{this.props.pagename}</h5>

@@ -1,29 +1,21 @@
 import React from "react";
-import Link from "next/link";
-import {
-	Container, Row, Col, Nav, NavItem, Button, Form, NavLink, Collapse,
-	Navbar, NavbarToggler, NavbarBrand, Modal, ModalHeader, ModalBody,
-	ModalFooter, ListGroup, ListGroupItem
-} from "reactstrap";
-import { NextAuth } from "next-auth/client";
-import Styles from "../css/index.scss";
-import profilePic from "../static/brand/profilePic.jpg";
+import { ListGroup, ListGroupItem } from "reactstrap";
 
 export default class extends React.Component {
 	render() {
 		return (
 			<ListGroup>
 				<ListGroupItem>
-					<a className="pageLink" href="/pages/home">Home</a>
+					<a className="pageLink" href="/index">Home</a>
 				</ListGroupItem>
 				<ListGroupItem>
-					<a className="pageLink" href="/pages/about-me">About Me</a>
+					<a className="pageLink" href="/about-me">About Me</a>
 				</ListGroupItem>
 				<ListGroupItem>
-					<a className="pageLink" href="/pages/projects">Projects</a>
+					<a className="pageLink" href="/projects">Projects</a>
 				</ListGroupItem>
 				<ListGroupItem>
-					<a className="pageLink" href="/pages/knowledge">Knowledge</a>
+					<a className="pageLink" href="/knowledge">Knowledge</a>
 				</ListGroupItem>
 			</ListGroup>
 		);

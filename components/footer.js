@@ -1,11 +1,4 @@
 import React from "react";
-import {
-	Container, Row, Col, Nav, NavItem, Button, Form, NavLink, Collapse,
-	Navbar, NavbarToggler, NavbarBrand, Modal, ModalHeader, ModalBody,
-	ModalFooter, ListGroup, ListGroupItem
-} from "reactstrap";
-import Styles from "../css/index.scss";
-
 
 export default class extends React.Component {
 	constructor() {
@@ -18,7 +11,7 @@ export default class extends React.Component {
 	render() {
 		return (
 			<footer className="footer">
-				<p>(this.state.author}</p>
+				<p>{this.state.author}</p>
 			</footer>
 		);
 	}

@@ -3,6 +3,7 @@
 const next = require("next");
 const nextAuth = require("next-auth");
 const nextAuthConfig = require("./next-auth.config");
+const favicon = require("serve-favicon");
 
 const routes = {
 	admin: require("./routes/admin"),
@@ -52,8 +53,8 @@ nextApp
 	})
 	.then((nextAuthOptions) => {
 		// Get Express and instance of Express from NextAuth
-		const express = nextAuthOptions.express;
-		const expressApp = nextAuthOptions.expressApp;
+		const { express } = nextAuthOptions;
+		const { expressApp } = nextAuthOptions;
 
 		// Add admin routes
 		routes.admin(expressApp);
@@ -75,6 +76,8 @@ nextApp
 			const nextRequestHandler = nextApp.getRequestHandler();
 			return nextRequestHandler(req, res);
 		});
+
+		expressApp.use(favicon("./static/brand/favicon.ico"));
 
 		expressApp.listen(process.env.PORT, (err) => {
 			if (err) {

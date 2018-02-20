@@ -15,7 +15,14 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				loader: "babel-loader!raw-loader!sass-loader"
-			}
+			},
+			{
+				test: /\.(png|jpg|gif|ico)$/,
+				loader: "url-loader",
+				options: {
+					limit: 8192
+				}
+			},
 		);
 		return config;
 	}
