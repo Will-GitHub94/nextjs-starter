@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Container, Jumbotron, Navbar, Nav, NavLink, NavItem, NavbarBrand } from "reactstrap";
 import PropTypes from "prop-types";
 
@@ -48,29 +49,21 @@ export class Navigation extends React.Component {
 	render() {
 		return (
 			<Navbar fixed className="navbar pt-3 pb-3">
-				<Nav>
-					<NavItem>
-						<NavLink href="/index">Home</NavLink>
-					</NavItem>
-				</Nav>
-				<Nav>
-					<NavItem>
-						<NavLink href="/about-me">About Me</NavLink>
-					</NavItem>
-				</Nav>
+				<Link href="/index">
+					<a>Home</a>
+				</Link>
+				<Link href="/about-me">
+					<a>About Me</a>
+				</Link>
 				<NavbarBrand>
 					<img src="/static/brand/logo/310x400.png" className="nav-logo"/>
 				</NavbarBrand>
-				<Nav>
-					<NavItem>
-						<NavLink href="/projects">Projects</NavLink>
-					</NavItem>
-				</Nav>
-				<Nav>
-					<NavItem>
-						<NavLink href="/knowledge">Knowledge</NavLink>
-					</NavItem>
-				</Nav>
+				<Link href="/projects">
+					<a>Projects</a>
+				</Link>
+				<Link href="/knowledge">
+					<a>Knowledge</a>
+				</Link>
 			</Navbar>
 		);
 	}
