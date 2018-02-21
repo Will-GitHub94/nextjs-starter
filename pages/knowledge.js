@@ -7,7 +7,7 @@ export default class extends React.Component {
 	render() {
 		return (
 			<Layout {...this.props} navmenu={false} container={false}>
-				<Header pagename="Knowledge"/>
+				<Header banner={false} pagename="Knowledge"/>
 				<Footer/>
 			</Layout>
 		);
