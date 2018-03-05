@@ -26,6 +26,7 @@
     "nodemailer-direct-transport": "^3.3.2",
     "nodemailer-smtp-transport": "^2.7.4",
     "now-logs": "0.0.7",
+    "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
     "passport-github": "^1.1.0",
     "passport-google-oauth": "^1.0.0",
@@ -56,6 +57,7 @@
     "eslint-plugin-react": "^7.6.1",
     "eslint-plugin-require": "0.0.1",
     "file-loader": "^1.1.7",
+    "fs-extra": "^5.0.0",
     "ionicons": "^3.0.0",
     "url-loader": "^0.6.2",
     "xo": "^0.18.2"

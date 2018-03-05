@@ -48,7 +48,7 @@ export default class extends React.Component {
 export class Navigation extends React.Component {
 	render() {
 		return (
-			<Navbar fixed className="navbar pt-3 pb-3">
+			<Navbar fixed className="navbar" id="main-nav">
 				<Link href="/index">
 					<a>Home</a>
 				</Link>

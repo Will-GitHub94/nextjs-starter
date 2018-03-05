@@ -21,7 +21,7 @@
  * */
 
 // Load environment variables from a .env file if one exists
-require("dotenv").load();
+require("dotenv").config();
 
 module.exports = () => {
 	const providers = [];
@@ -61,22 +61,20 @@ module.exports = () => {
 
 	if (process.env.GITHUB_ID && process.env.GITHUB_SECRET) {
 		providers.push({
-			providerName: "GitHub",
+			providerName: "github",
 			providerOptions: {
 				scope: []
 			},
 			Strategy: require("passport-github").Strategy,
 			strategyOptions: {
-				consumerKey: process.env.GITHUB_ID,
-				consumerSecret: process.env.GITHUB_SECRET,
-				userProfileURL: "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"
+				clientID: process.env.GITHUB_ID,
+				clientSecret: process.env.GITHUB_SECRET,
+				callbackURL: "http://127.0.0.1/auth/github/callback"
 			},
 			getProfile(profile) {
 				// Normalize profile into one with {id, name, email} keys
 				return {
-					id: profile.id,
-					name: profile.displayName,
-					email: (profile.emails && profile.emails[0].value) ? profile.emails[0].value : ""
+					githubId: profile.id
 				};
 			}
 		});

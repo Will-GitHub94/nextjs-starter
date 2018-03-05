@@ -5,6 +5,7 @@ const nextAuth = require("next-auth");
 const nextAuthConfig = require("./next-auth.config");
 const favicon = require("serve-favicon");
 const path = require("path");
+const passport = require("passport");
 
 const routes = {
 	admin: require("./routes/admin"),
@@ -12,7 +13,7 @@ const routes = {
 };
 
 // Load environment variables from .env file if present
-require("dotenv").load();
+require("dotenv").config();
 
 // now-logs allows remote debugging if deploying to now.sh
 if (process.env.LOGS_SECRET) {
@@ -78,7 +79,7 @@ nextApp
 			return nextRequestHandler(req, res);
 		});
 
-		expressApp.use(favicon(path.join(__dirname, "static/brand", "favicon.ico")));
+		expressApp.use(favicon(path.join(__dirname, "static", "brand", "favicon.ico")));
 
 		expressApp.listen(process.env.PORT, (err) => {
 			if (err) {
