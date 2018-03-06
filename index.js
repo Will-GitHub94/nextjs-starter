@@ -79,7 +79,7 @@ nextApp
 			return nextRequestHandler(req, res);
 		});
 
-		expressApp.use(favicon(path.join(__dirname, "static", "brand", "favicon.ico")));
+		expressApp.use(favicon(path.join(__dirname, "favicon.ico")));
 
 		expressApp.listen(process.env.PORT, (err) => {
 			if (err) {

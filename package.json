@@ -1,10 +1,10 @@
 {
   "name": "wmashworth",
-  "version": "5.3.0",
-  "description": "A starter Next.js project with email and oAuth authentication",
-  "author": "Iain Collins <me@iaincollins.com>",
+  "version": "1.0.0",
+  "description": "Professional website built using Next.js",
+  "author": "Will Ashworth",
   "license": "ISC",
-  "repository": "https://github.com/iaincollins/nextjs-starter.git",
+  "repository": "https://github.com/Will-GitHub94/nextjs-starter",
   "main": "index.js",
   "dependencies": {
     "babel-core": "^6.26.0",
